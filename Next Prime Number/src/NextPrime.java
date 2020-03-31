@@ -23,7 +23,7 @@ public class NextPrime {
 			System.exit(0);
 		}else {
 			while(true) {
-				nextPrime = printNextPrime();
+				printNextPrime();
 				increaseNextPrime();
 					System.out.println("another? < Y / N >");
 					ans = sc.next().charAt(0);
@@ -35,11 +35,10 @@ public class NextPrime {
 			}
 		}
 	
-		private int printNextPrime() {
+		private void printNextPrime() {
 			while(!isPrime(nextPrime))
 				increaseNextPrime();
 			System.out.print(nextPrime + "   ");
-			return nextPrime;
 		}
 	
 		
